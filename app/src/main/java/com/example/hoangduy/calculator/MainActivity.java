@@ -6,35 +6,35 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView txtn0;
-    TextView txtn1;
-    TextView txtn2;
-    TextView txtn3;
-    TextView txtn4;
-    TextView txtn5;
-    TextView txtn6;
-    TextView txtn7;
-    TextView txtn8;
-    TextView txtn9;
-    TextView txtdot;
-    TextView txtpercent;
-    TextView txtominus;
-    TextView txtoplus;
-    TextView txtodiv;
-    TextView txtomul;
-    TextView txtoequal;
-    TextView txtclear;
-    TextView txtclearall;
-    TextView txtinput;
-    TextView txtresult;
-    TextView txtback;
-    int flag=0;
-    String result="";
-    TextView txtsqrt;
-    private static int sqrt=0;
-    int flago=0;
+    private TextView mTvn0;
+    private TextView mTvn1;
+    private TextView mTvn2;
+    private TextView mTvn3;
+    private TextView mTvn4;
+    private TextView mTvn5;
+    private TextView mTvn6;
+    private TextView mTvn7;
+    private TextView mTvn8;
+    private TextView mTvn9;
+    private TextView mTvdot;
+    private TextView mTvpercent;
+    private TextView mTvminus;
+    private TextView mTvplus;
+    private TextView mTvdiv;
+    private TextView mTvmul;
+    private TextView mTvequal;
+    private TextView mTvclear;
+    private TextView mTvclearall;
+    private TextView mTvinput;
+    private TextView mTvresult;
+    private TextView mTvback;
+    private int flag = 0;
+    private String result = "";
+    private TextView mTvsqrt;
+    private static int sqrt = 0;
+    int flago = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,222 +44,216 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void init() {
-        txtn0 = (TextView) findViewById(R.id.n0);
-        txtn1 = (TextView) findViewById(R.id.n1);
-        txtn2 = (TextView) findViewById(R.id.n2);
-        txtn3 = (TextView) findViewById(R.id.n3);
-        txtn4 = (TextView) findViewById(R.id.n4);
-        txtn5 = (TextView) findViewById(R.id.n5);
-        txtn6 = (TextView) findViewById(R.id.n6);
-        txtn7 = (TextView) findViewById(R.id.n7);
-        txtn8 = (TextView) findViewById(R.id.n8);
-        txtn9 = (TextView) findViewById(R.id.n9);
-        txtoplus = (TextView) findViewById(R.id.oplus);
-        txtominus = (TextView) findViewById(R.id.ominus);
-        txtomul = (TextView) findViewById(R.id.omul);
-        txtodiv = (TextView) findViewById(R.id.odiv);
-        txtoequal = (TextView) findViewById(R.id.oequal);
-        txtdot = (TextView) findViewById(R.id.dot);
-        txtpercent = (TextView) findViewById(R.id.percent);
-        txtclear = (TextView) findViewById(R.id.clear);
-        txtclearall = (TextView) findViewById(R.id.clearall);
-        txtinput = (TextView) findViewById(R.id.txtinput);
-        txtresult = (TextView) findViewById(R.id.result);
-        txtsqrt = (TextView) findViewById(R.id.sqr);
-        txtback = (TextView) findViewById(R.id.back);
+        mTvn0 = (TextView) findViewById(R.id.tvn0);
+        mTvn1 = (TextView) findViewById(R.id.tvn1);
+        mTvn2 = (TextView) findViewById(R.id.tvn2);
+        mTvn3 = (TextView) findViewById(R.id.tvn3);
+        mTvn4 = (TextView) findViewById(R.id.tvn4);
+        mTvn5 = (TextView) findViewById(R.id.tvn5);
+        mTvn6 = (TextView) findViewById(R.id.tvn6);
+        mTvn7 = (TextView) findViewById(R.id.tvn7);
+        mTvn8 = (TextView) findViewById(R.id.tvn8);
+        mTvn9 = (TextView) findViewById(R.id.tvn9);
+        mTvplus = (TextView) findViewById(R.id.tvplus);
+        mTvminus = (TextView) findViewById(R.id.tvminus);
+        mTvmul = (TextView) findViewById(R.id.tvmul);
+        mTvdiv = (TextView) findViewById(R.id.tvdiv);
+        mTvequal = (TextView) findViewById(R.id.tvequal);
+        mTvdot = (TextView) findViewById(R.id.tvdot);
+        mTvpercent = (TextView) findViewById(R.id.tvpercent);
+        mTvclear = (TextView) findViewById(R.id.tvclear);
+        mTvclearall = (TextView) findViewById(R.id.tvclearall);
+        mTvinput = (TextView) findViewById(R.id.tvinput);
+        mTvresult = (TextView) findViewById(R.id.tvresult);
+        mTvsqrt = (TextView) findViewById(R.id.tvsqr);
+        mTvback = (TextView) findViewById(R.id.tvback);
 
-        txtn0.setOnClickListener(this);
-        txtsqrt.setOnClickListener(this);
-        txtn1.setOnClickListener(this);
-        txtn2.setOnClickListener(this);
-        txtn3.setOnClickListener(this);
-        txtn4.setOnClickListener(this);
-        txtn5.setOnClickListener(this);
-        txtn6.setOnClickListener(this);
-        txtn7.setOnClickListener(this);
-        txtn8.setOnClickListener(this);
-        txtn9.setOnClickListener(this);
-        txtoplus.setOnClickListener(this);
-        txtominus.setOnClickListener(this);
-        txtomul.setOnClickListener(this);
-        txtodiv.setOnClickListener(this);
-        txtoequal.setOnClickListener(this);
-        txtdot.setOnClickListener(this);
-        txtpercent.setOnClickListener(this);
-        txtclear.setOnClickListener(this);
-        txtclearall.setOnClickListener(this);
-        txtback.setOnClickListener(this);
-        txtresult.setMovementMethod(new ScrollingMovementMethod());
-        txtinput.setMovementMethod(new ScrollingMovementMethod());
+        mTvn0.setOnClickListener(this);
+        mTvsqrt.setOnClickListener(this);
+        mTvn1.setOnClickListener(this);
+        mTvn2.setOnClickListener(this);
+        mTvn3.setOnClickListener(this);
+        mTvn4.setOnClickListener(this);
+        mTvn5.setOnClickListener(this);
+        mTvn6.setOnClickListener(this);
+        mTvn7.setOnClickListener(this);
+        mTvn8.setOnClickListener(this);
+        mTvn9.setOnClickListener(this);
+        mTvplus.setOnClickListener(this);
+        mTvminus.setOnClickListener(this);
+        mTvmul.setOnClickListener(this);
+        mTvdiv.setOnClickListener(this);
+        mTvequal.setOnClickListener(this);
+        mTvdot.setOnClickListener(this);
+        mTvpercent.setOnClickListener(this);
+        mTvclear.setOnClickListener(this);
+        mTvclearall.setOnClickListener(this);
+        mTvback.setOnClickListener(this);
+        mTvresult.setMovementMethod(new ScrollingMovementMethod());
+        mTvinput.setMovementMethod(new ScrollingMovementMethod());
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.n0:
-                 if (flag == 0 )
-                 {
-                 result += "0";
-                 flago=2;
-                 } else {
-                     result = "0";
-                     flag = 0;
-                 }
-                 txtresult.setText(result);
-                 break;
+                if (flag == 0) {
+                    result += "0";
+                    flago = 2;
+                } else {
+                    result = "0";
+                    flag = 0;
+                }
+                mTvresult.setText(result);
+                break;
             case R.id.n1:
-                if (flag == 1 )
-                {
+                if (flag == 1) {
                     result += "1";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "1";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n2:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "2";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "2";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n3:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "3";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "3";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n4:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "4";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "4";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n5:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "5";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "5";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n6:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "6";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "6";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n7:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "7";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "7";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n8:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "8";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "8";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.n9:
-                if (flag == 0 )
-                {
+                if (flag == 0) {
                     result += "9";
-                    flago=2;
+                    flago = 2;
                 } else {
                     result = "9";
                     flag = 0;
                 }
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.dot:
                 result += '.';
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
-            case R.id.percent: result += "%";
-                txtresult.setText(result);
+            case R.id.percent:
+                result += "%";
+                mTvresult.setText(result);
                 break;
             case R.id.oplus:
                 if (flago == 2) {
-                result += '+';
-                flag = 0;
-                flago=0;
-                txtresult.setText(result);
+                    result += '+';
+                    flag = 0;
+                    flago = 0;
+                    mTvresult.setText(result);
                 }
                 break;
             case R.id.ominus:
                 if (flago == 2) {
                     result += '-';
                     flag = 0;
-                    flago=0;
-                    txtresult.setText(result);
+                    flago = 0;
+                    mTvresult.setText(result);
                 }
                 break;
             case R.id.omul:
                 if (flago == 2) {
                     result += '*';
                     flag = 0;
-                    flago=0;
-                    txtresult.setText(result);
+                    flago = 0;
+                    mTvresult.setText(result);
                 }
                 break;
             case R.id.odiv:
                 if (flago == 2) {
                     result += '/';
                     flag = 0;
-                    flago=0;
-                    txtresult.setText(result);
+                    flago = 0;
+                    mTvresult.setText(result);
                 }
                 break;
-            case R.id.clear: result = "";
-                txtresult.setText("");
+            case R.id.clear:
+                result = "";
+                mTvresult.setText("");
                 break;
-            case R.id.clearall: result = "";
-                txtresult.setText(result);
-                txtinput.setText(result);
+            case R.id.clearall:
+                result = "";
+                mTvresult.setText(result);
+                mTvinput.setText(result);
                 break;
-            case R.id.sqr: result += "√";
+            case R.id.sqr:
+                result += "√";
                 sqrt++;
-                txtresult.setText(result);
+                mTvresult.setText(result);
                 break;
             case R.id.back:
                 try {
                     result = result.substring(0, result.length() - 1);
-                    txtresult.setText(result);
+                    mTvresult.setText(result);
                     break;
                 } catch (Exception e) {
 
@@ -267,17 +261,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.oequal:
                 Computation computation = new Computation();
                 try {
-                    for (int i = 0; i < sqrt; i++)
-                    {
+                    for (int i = 0; i < sqrt; i++) {
                         result = filter(result);
                     }
                     sqrt = 0;
-                    txtinput.setText(txtresult.getText().toString());
-                    float realresult = (float)computation.getResult(result);
-                    txtresult.setText(realresult+"");
-                    result=txtresult.getText().toString();
+                    mTvinput.setText(mTvresult.getText().toString());
+                    float realresult = (float) computation.getResult(result);
+                    mTvresult.setText(realresult + "");
+                    result = mTvresult.getText().toString();
                     flag = 1;
-                    txtresult.scrollTo(0,0);
+                    mTvresult.scrollTo(0, 0);
                     break;
                 } catch (Exception e) {
 
@@ -288,31 +281,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public String filter(String result) {
         if (sqrt > 0) {
             double a = 0;
-            int sqrtPos=0;
-            int endPos=0;
-            Maths maths = new Maths(0,0,"");
+            int sqrtPos = 0;
+            int endPos = 0;
+            Maths maths = new Maths(0, 0, "");
             a = maths.sqrt(result);
             sqrtPos = maths.getStart();
             endPos = maths.getEnd();
-            result = joinString(sqrtPos,endPos,a);
+            result = joinString(sqrtPos, endPos, a);
         }
         return result;
     }
-    public String joinString (int end, int start, Double a) {
-        return result.substring(0,end) + String.valueOf(a) + result.substring(start,result.length());
+
+    public String joinString(int end, int start, Double a) {
+        return result.substring(0, end) + String.valueOf(a) + result.substring(start, result.length());
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putString("txtresult",txtresult.getText().toString());
-        outState.putString("txtinput",txtinput.getText().toString());
+        outState.putString("mTvresult", mTvresult.getText().toString());
+        outState.putString("mTvinput", mTvinput.getText().toString());
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        txtresult.setText(savedInstanceState.getString("txtresult"));
-        txtinput.setText(savedInstanceState.getString("txtinput"));
+        mTvresult.setText(savedInstanceState.getString("mTvresult"));
+        mTvinput.setText(savedInstanceState.getString("mTvinput"));
     }
 }
