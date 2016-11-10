@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hoangduy.calculator.MainActivity">
+
+    <LinearLayout
+        android:background="@color/colorBar"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+       <TextView
+           android:layout_weight="1"
+           style="@style/icon"
+           android:id="@+id/back"
+           android:text="@string/clear1char"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           tools:ignore="NestedWeights" />
+        <TextView
+            android:gravity="center"
+            android:textSize="@dimen/calculator_tv_title_fontsize"
+            android:textColor="@android:color/white"
+            android:text="@string/title"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+       <TextView
+           style="@style/icon"
+           android:gravity="end"
+           android:id="@+id/sqr"
+           android:text="@string/sqrt"
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <TextView
+        android:gravity="center_vertical|end"
+        android:textColor="@android:color/white"
+        android:background="@color/colorInput"
+        android:layout_weight="1"
+        android:textSize="@dimen/calculator_tv_displayInput_font_size"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/txtinput" />
+    <TextView
+        android:scrollbars="horizontal"
+        android:gravity="end"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:background="@color/colorResult"
+        android:textSize="@dimen/calculator_tv_displayResult_font_size"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:maxLines="1"
+        android:id="@+id/result" />
+    <LinearLayout
+        android:background="@color/colorKeyboard"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:text="@string/clear"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorClear"
+            android:textSize="@dimen/calculator_tv_clear_fontsize"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/clearall"
+            tools:ignore="NestedWeights" />
+        <TextView
+            android:text="@string/clearall"
+            style="@style/NumberCalculator"
+            android:layout_height="match_parent"
+            android:id="@+id/clear" />
+        <TextView
+            style="@style/NumberCalculator"
+            android:text="@string/div"
+            android:layout_height="match_parent"
+            android:id="@+id/odiv" />
+        <TextView
+            style="@style/NumberCalculator"
+            android:text="@string/mul"
+            android:layout_height="match_parent"
+            android:id="@+id/omul" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorKeyboard"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            style="@style/NumberCalculator"
+            android:text="@string/n1"
+            android:layout_height="match_parent"
+            android:id="@+id/n1" />
+        <TextView
+            style="@style/NumberCalculator"
+            android:text="@string/n2"
+            android:layout_height="match_parent"
+            android:id="@+id/n2" />
+        <TextView
+            android:text="@string/n3"
+            style="@style/NumberCalculator"
+            android:layout_height="match_parent"
+            android:id="@+id/n3" />
+        <TextView
+            style="@style/NumberCalculator"
+            android:text="@string/minus"
+            android:gravity="center"
+            android:textSize="@dimen/calculator_tv_minus_fontsize"
+            android:textColor="@android:color/white"
+            android:layout_height="match_parent"
+            android:id="@+id/ominus" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorKeyboard"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:text="@string/n4"
+            style="@style/NumberCalculator"
+            android:layout_height="match_parent"
+            android:id="@+id/n4" />
+        <TextView
+            android:text="@string/n5"
+            style="@style/NumberCalculator"
+            android:layout_height="match_parent"
+            android:id="@+id/n5" />
+        <TextView
+            style="@style/NumberCalculator"
+            android:text="@string/n6"
+            android:layout_height="match_parent"
+            android:id="@+id/n6" />
+        <TextView
+            style="@style/NumberCalculator"
+            android:text="@string/plus"
+            android:layout_height="match_parent"
+            android:id="@+id/oplus" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorKeyboard"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:ignore="NestedWeights">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    style="@style/NumberCalculator"
+                    android:text="@string/n7"
+                    android:layout_height="match_parent"
+                    android:id="@+id/n7" />
+                <TextView
+                    style="@style/NumberCalculator"
+                    android:text="@string/n8"
+                    android:layout_height="match_parent"
+                    android:id="@+id/n8" />
+                <TextView
+                    android:text="@string/n9"
+                    style="@style/NumberCalculator"
+                    android:layout_height="match_parent"
+                    android:id="@+id/n9" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:text="@string/n0"
+                    style="@style/NumberCalculator"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/n0" />
+                <TextView
+                    android:text="@string/dot"
+                    style="@style/NumberCalculator"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/dot" />
+                <TextView
+                    style="@style/NumberCalculator"
+                    android:text="@string/per"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/percent" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            style="@style/NumberCalculator"
+            android:background="@color/colorlEqual"
+            android:text="@string/equal"
+            android:layout_weight="0.33"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/oequal" />
+    </LinearLayout>
+</LinearLayout>

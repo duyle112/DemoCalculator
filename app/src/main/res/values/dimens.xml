@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="calculator_tv_minus_fontsize">40sp</dimen>
+    <dimen name="calculator_tv_title_fontsize">20sp</dimen>
+    <dimen name="calculator_tv_clear_fontsize">30sp</dimen>
+    <dimen name="calculator_tv_displayInput_font_size">20sp</dimen>
+    <dimen name="calculator_tv_displayResult_font_size">30sp</dimen>
+</resources>
